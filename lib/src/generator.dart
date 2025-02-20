@@ -388,13 +388,13 @@ class Generator {
   /// Skips [n] lines
   ///
   /// Similar to [feed] but uses an alternative command
-  // List<int> emptyLines(int n) {
-  //   List<int> bytes = [];
-  //   if (n > 0) {
-  //     bytes += List.filled(n, '\n').join().codeUnits;
-  //   }
-  //   return bytes;
-  // }
+  List<int> emptyLines(int n) {
+    List<int> bytes = [];
+    // if (n > 0) {
+    //   bytes += List.filled(n, '\n').join().codeUnits;
+    // }
+    return bytes;
+  }
 
   /// Skips [n] lines
   ///
