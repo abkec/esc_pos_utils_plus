@@ -377,7 +377,7 @@ class Generator {
         maxCharsPerLine: maxCharsPerLine,
       );
       // Ensure at least one line break after the text
-      bytes += emptyLines(linesAfter + 1);
+      //bytes += emptyLines(linesAfter + 1);
     } else {
       bytes += _mixedKanji(text, styles: styles, linesAfter: linesAfter);
     }
@@ -579,7 +579,7 @@ class Generator {
       }
     }
 
-    bytes += emptyLines(1);
+    //bytes += emptyLines(1);
 
     if (isNextRow) {
       bytes += row(nextRow);
@@ -800,7 +800,7 @@ class Generator {
     List<int> bytes = [];
     bytes += _text(textBytes, styles: styles, maxCharsPerLine: maxCharsPerLine);
     // Ensure at least one line break after the text
-    bytes += emptyLines(linesAfter + 1);
+    //bytes += emptyLines(linesAfter + 1);
     return bytes;
   }
   // ************************ (end) Public command generators ************************
