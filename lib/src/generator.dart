@@ -391,8 +391,9 @@ class Generator {
   List<int> emptyLines(int n) {
     List<int> bytes = [];
     if (n > 0) {
-      bytes += List.filled(n, '\n\n').join().codeUnits;
+      bytes += List.filled(n, '').join().codeUnits;
     }
+    print('eidted');
     return bytes;
   }
 
