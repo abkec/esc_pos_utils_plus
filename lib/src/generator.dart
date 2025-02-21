@@ -377,7 +377,7 @@ class Generator {
         maxCharsPerLine: maxCharsPerLine,
       );
       // Ensure at least one line break after the text
-      //bytes += emptyLines(linesAfter + 1);
+      bytes += emptyLines(linesAfter + 1);
     } else {
       bytes += _mixedKanji(text, styles: styles, linesAfter: linesAfter);
     }
@@ -390,9 +390,9 @@ class Generator {
   /// Similar to [feed] but uses an alternative command
   List<int> emptyLines(int n) {
     List<int> bytes = [];
-    // if (n > 0) {
-    //   bytes += List.filled(n, '\n').join().codeUnits;
-    // }
+    if (n > 0) {
+      bytes += List.filled(n, '\n\n').join().codeUnits;
+    }
     return bytes;
   }
 
